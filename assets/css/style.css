@@ -1,0 +1,27 @@
+/* Custom CSS */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+}
+
+.logo {
+    width: 50px;
+}
+
+.rent-btn {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+}
+
+.rent-btn:hover {
+    background-color: #cc5200;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+}
