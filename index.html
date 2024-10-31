@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Rental | Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo.png" alt="Laptop Rental Logo" class="logo"> Laptop Rental
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="jumbotron text-center bg-primary text-white">
+        <h1>Rent High-Quality Laptops</h1>
+        <p>Find the best laptops for rent, perfect for your work or studies.</p>
+        <a href="#laptops" class="btn btn-light">View Laptops</a>
+    </header>
+
+    <!-- Laptop Section -->
+    <section id="laptops" class="container my-5">
+        <h2 class="text-center mb-4">Available Laptops</h2>
+        <div class="row">
+            <!-- Laptop 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/images/laptop1.jpg" class="card-img-top" alt="Laptop 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Dell Inspiron 15</h5>
+                        <p class="card-text">High performance, ideal for business and multitasking.</p>
+                        <button class="btn btn-primary rent-btn" onclick="rentNow('Dell Inspiron 15')">Rent Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Laptop 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/images/laptop2.jpg" class="card-img-top" alt="Laptop 2">
+                    <div class="card-body">
+                        <h5 class="card-title">MacBook Air M1</h5>
+                        <p class="card-text">Slim, lightweight, and powerful for professionals on the go.</p>
+                        <button class="btn btn-primary rent-btn" onclick="rentNow('MacBook Air M1')">Rent Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Laptop 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/images/laptop3.jpg" class="card-img-top" alt="Laptop 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Lenovo ThinkPad X1</h5>
+                        <p class="card-text">Powerful and secure, great for both business and personal use.</p>
+                        <button class="btn btn-primary rent-btn" onclick="rentNow('Lenovo ThinkPad X1')">Rent Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-4 text-center">
+        <button class="btn btn-secondary filter-btn active" data-filter="All">All</button>
+        <button class="btn btn-secondary filter-btn" data-filter="Business">Business</button>
+        <button class="btn btn-secondary filter-btn" data-filter="Personal">Personal</button>
+        <button class="btn btn-secondary filter-btn" data-filter="Gaming">Gaming</button>
+    </section>
+
+    <div class="container my-5">
+        <h3>Your Cart</h3>
+        <div id="cart-items" class="my-3"></div>
+        <h4>Total: <span id="total-price">$0.00</span></h4>
+    </div>
+    
+    
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3">
+        <p>&copy; 2024 Laptop Rental</p>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
