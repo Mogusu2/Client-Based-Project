@@ -1,11 +1,23 @@
 (function() {
     // Laptop data
     const laptops = [
-        { name: "Dell Inspiron 15", type: "Business", pricePerDay: 15 },
-        { name: "MacBook Air M1", type: "Personal", pricePerDay: 20 },
-        { name: "Lenovo ThinkPad X1", type: "Business", pricePerDay: 18 },
-        { name: "HP Pavilion", type: "Gaming", pricePerDay: 25 },
-        { name: "Acer Swift", type: "Personal", pricePerDay: 12 },
+        { name: "Apple MacBook Air 13 (2020)", type: "Business", pricePerDay: 15 },
+        { name: "Apple MacBook Air M1", type: "Personal", pricePerDay: 20 },
+        { name: "Apple MacBook Pro 14", type: "Business", pricePerDay: 18 },
+        { name: "Apple MacBook Pro 16 (2019)", type: "Gaming", pricePerDay: 25 },
+        { name: "Apple MacBook Pro 16 (2021)", type: "Personal", pricePerDay: 12 },
+        { name: "Dell XPS 13", type: "Personal", pricePerDay: 24 },
+        { name: "Dell XPS 15", type: "Personal", pricePerDay: 18 },
+        { name: "Dell XPS 17", type: "Business", pricePerDay: 23 },
+        { name: "NMAX", type: "Gaming", pricePerDay: 12 },
+        { name: "Surface Laptop 5 13", type: "Personal", pricePerDay: 32 },
+        { name: "Surface Laptop 5 15", type: "Personal", pricePerDay: 22 },
+        { name: "Surface Laptop 5 16", type: "Business", pricePerDay: 42 },
+        { name: "Surface Laptop Studio 2", type: "Business", pricePerDay: 27 },
+        { name: "VivoBook Pro", type: "Gaming", pricePerDay: 28 },
+        { name: "ZenBook Flip", type: "Gaming", pricePerDay: 39 },
+        { name: "ZenBook Fold", type: "Business", pricePerDay: 19 },
+        { name: "ZenBook Pro", type: "Personal", pricePerDay: 17 },
     ];
 
     // Cart data
