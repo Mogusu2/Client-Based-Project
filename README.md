@@ -6,7 +6,6 @@ This is a web application designed to facilitate laptop rentals. Users can brows
 
 - [Features](#features)
 - [Project Structure](#project-structure)
-- [Setup and Installation](#setup-and-installation)
 - [Technologies Used](#technologies-used)
 - [Usage](#usage)
 - [License](#license)
