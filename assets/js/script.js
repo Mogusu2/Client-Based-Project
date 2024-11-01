@@ -1,4 +1,4 @@
-(function() {   
+(function() {
     // Laptop data
     const laptops = [
         { name: "Dell Inspiron 15", type: "Business", pricePerDay: 15 },
@@ -8,58 +8,10 @@
         { name: "Acer Swift", type: "Personal", pricePerDay: 12 },
     ];
 
-    // Cart data
-    let cart = [];
-
-    // Rent Now button action
-    function rentNow(laptopName) {
-        const laptop = laptops.find(lap => lap.name === laptopName);
-        if (laptop) {
-            addToCart(laptop);
-            showCart();
-        } else {
-            alert("Laptop not found!");
-        }
-    }
-
-    // Add laptop to cart
-    function addToCart(laptop) {
-        const existing = cart.find(item => item.name === laptop.name);
-        if (existing) {
-            alert(`${laptop.name} is already in your cart.`);
-        } else {
-            cart.push({ ...laptop, days: 1 });
-            alert(`${laptop.name} added to your cart.`);
-        }
-    }
-
-    // Show cart contents
-    function showCart() {
-        const cartContainer = document.getElementById("cart-items");
-        cartContainer.innerHTML = "";
-        cart.forEach(item => {
-            const itemRow = document.createElement("div");
-            itemRow.className = "cart-item row mb-2";
-            itemRow.innerHTML = `
-                <div class="col-6">${item.name}</div>
-                <div class="col-3">$${item.pricePerDay} x ${item.days} days</div>
-                <div class="col-3">$${(item.pricePerDay * item.days).toFixed(2)}</div>
-            `;
-            cartContainer.appendChild(itemRow);
-        });
-        updateTotal();
-    }
-
-    // Update total rental cost
-    function updateTotal() {
-        const totalPrice = cart.reduce((acc, item) => acc + item.pricePerDay * item.days, 0);
-        document.getElementById("total-price").innerText = `$${totalPrice.toFixed(2)}`;
-    }
-
-    // Filter laptops based on type
+    // Function to display laptops based on the category filter
     function filterLaptops(type) {
         const laptopContainer = document.getElementById("laptop-list");
-        laptopContainer.innerHTML = "";
+        laptopContainer.innerHTML = "";  // Clear previous content
         laptops
             .filter(laptop => type === "All" || laptop.type === type)
             .forEach(laptop => {
@@ -79,21 +31,29 @@
             });
     }
 
-    // Initialize default view
+    // Event Listener on page load to initialize buttons
     document.addEventListener("DOMContentLoaded", () => {
-        filterLaptops("All");
-        showCart();
+        filterLaptops("All");  // Display all laptops by default
 
-        // Setup filter buttons
+        // Add event listeners to filter buttons
         document.querySelectorAll(".filter-btn").forEach(button => {
             button.addEventListener("click", () => {
-                filterLaptops(button.dataset.filter);
+                const filterType = button.getAttribute("data-filter");
+                filterLaptops(filterType);  // Call filter function with the category
+                // Update active button style
                 document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
                 button.classList.add("active");
             });
         });
     });
 
-    // Make functions available globally (optional)
-    window.rentNow = rentNow;
+    // Rent Now button functionality (kept as is)
+    window.rentNow = function(laptopName) {
+        const laptop = laptops.find(lap => lap.name === laptopName);
+        if (laptop) {
+            alert(`${laptop.name} is added to your cart!`);
+        } else {
+            alert("Laptop not found!");
+        }
+    };
 })();
